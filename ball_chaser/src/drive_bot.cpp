@@ -19,7 +19,7 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
     motor_command_publisher.publish(motor_command);
 
     // Wait 1 seconds for arm to settle
-    ros::Duration(1).sleep();
+    //ros::Duration(1).sleep();
 
     res.msg_feedback = "Linear x set to " + std::to_string(req.linear_x) + " , Angular z set to " + std::to_string(req.angular_z);
     ROS_INFO_STREAM(res.msg_feedback);
